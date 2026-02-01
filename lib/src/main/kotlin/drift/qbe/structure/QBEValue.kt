@@ -21,7 +21,7 @@ data class QBETemporary(val name: String) : QBEValue, QBEUsableValue {
     override fun emit(): String = "%$name"
 }
 
-data class QBEGlobal(val name: String) : QBEValue {
+data class QBEGlobal(val name: String) : QBEValue, QBEUsableValue {
 
     override fun emit(): String = "$$name"
 }
