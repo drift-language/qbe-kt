@@ -12,20 +12,22 @@ sealed interface QBEType {
     val code: String
 }
 
+sealed interface QBEConstantType
 
-data object QBEWord : QBEType {
+
+data object QBEWord : QBEType, QBEConstantType {
     override val code = "w"
 }
 
-data object QBELong : QBEType {
+data object QBELong : QBEType, QBEConstantType {
     override val code = "l"
 }
 
-data object QBESingle : QBEType {
+data object QBESingle : QBEType, QBEConstantType {
     override val code = "s"
 }
 
-data object QBEDouble : QBEType {
+data object QBEDouble : QBEType, QBEConstantType {
     override val code = "d"
 }
 
